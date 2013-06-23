@@ -1,0 +1,23 @@
+%html
+  %head
+    %title Sinatra JQuery Ajax
+    %link(rel="stylesheet" type="text/css" href="/style.css")
+  %body
+    %div.container
+      %div.row
+        %div.page-header
+          %h1 
+            An example of Sinatra working with Ajaxified JQuery
+          #footer
+          %h2 leave your message
+          %p= @title
+          #message
+          %form#new_message{:action => '/new'}
+            %p
+              %input.pink{:type => "text", :id => "will", :name => "will"}
+              %strong will
+              %input.pink{:type => "text", :id => "you", :name => "you"}
+              %strong you
+              %input{:type => "submit", :value => "post!"}
+          =yield
+
