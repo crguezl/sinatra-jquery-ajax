@@ -3,9 +3,9 @@
   $(document).ready(function() {
     $('#new_message').submit(function() {
       $.post($(this).attr('action'), $(this).serialize(), function(data){
-        $('#message').append("<p>" + data + "</p>");
-        $('#new_message').each(function(){this.reset();});
-      }, "text");
+          $('#message').append("<p>" + data + "</p>");
+          $('#new_message').each(function(){this.reset();});
+        }, "text");
       return false;
     });
   });
