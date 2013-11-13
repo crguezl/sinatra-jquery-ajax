@@ -1,6 +1,4 @@
-source :rubygems
+source 'https://rubygems.org'
 
 gem 'sinatra'
-gem 'dm-core'
-gem 'haml'
 
