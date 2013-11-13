@@ -1,11 +1,10 @@
-$(document).ready(function() {
-  $('#new_message').submit(function() {
-    $.get('/cheer/'+$('#chazam').val(), '', function(data){
-        $('#message').append("<p>" + data + "</p>");
-        //$('#new_message').each(function(){this.reset();});
-      }, "text");
-    return false;
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").load("/play",function(responseTxt,statusTxt,xhr){
+      /* if(statusTxt=="success") alert("External content loaded successfully!"); */
+      if(statusTxt=="error")
+        alert("Error: "+xhr.status+": "+xhr.statusText);
+    });
   });
 });
-
 
