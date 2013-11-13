@@ -2,6 +2,8 @@
   %head
     %title Sinatra JQuery Ajax
     %link(rel="stylesheet" type="text/css" href="/style.css")
+    %script{:type => 'text/javascript', :src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js'}
+    %script{:type => 'text/javascript', :src => '/js/app.js'}
   %body
     %div.container
       %div.row
@@ -9,15 +11,11 @@
           %h1 
             An example of Sinatra working with Ajaxified JQuery
           #footer
-          %h2 leave your message
+          %h2 Your name
           %p= @title
-          #message
-          %form#new_message{:action => '/new'}
+          %form#new_message
             %p
-              %input.pink{:type => "text", :id => "will", :name => "will"}
-              %strong will
-              %input.pink{:type => "text", :id => "you", :name => "you"}
-              %strong you
+              %input.pink{:type => "text", :id => "chazam", :name => "name"}
               %input{:type => "submit", :value => "post!"}
-          =yield
-
+              =yield
+          #message
