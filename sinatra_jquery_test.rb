@@ -5,7 +5,10 @@ get '/' do
 end
 
 get '/play' do 
-  %q{<h1 class="blue">Hello! <a href="/">back</a></h1> 
-  }
+  if request.xhr?
+    %q{<h1 class="blue">Hello! <a href="/">back</a></h1>}
+  else
+    "<h1>Not an Ajax request!</h1>"
+  end
 end
 
